@@ -23,7 +23,15 @@ const Weather = ({ city }) => {
   }, [city]);
   console.log(weatherData);
   if (!weatherData) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <img
+          src="https://media0.giphy.com/media/L05HgB2h6qICDs5Sms/giphy.gif?cid=ecf05e47agk31w5jce7vsn1le8tyltgyf63lbbg7ixxqxfuw&rid=giphy.gif&ct=s"
+          alt="laoding"
+          width="100px"
+        />
+      </div>
+    );
   }
 
   const { name, main, weather } = weatherData;
